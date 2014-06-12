@@ -232,7 +232,7 @@ s_data &lt;- rbind(read.table(&quot;UCI HAR Dataset/train/subject_train.txt&quot
 
 <pre><code class="r">features &lt;- read.table(&quot;UCI HAR Dataset/features.txt&quot;)[,2]
 names(x_data) &lt;- features
-x_data &lt;- x_data[,grepl(&quot;-mean|-std&quot;, features)]
+x_data &lt;- x_data[,grepl(&quot;-mean\\(|-std\\(&quot;, features)]
 </code></pre>
 
 <h2>Use descriptive activity names to name the activities in the data set</h2>

@@ -17,7 +17,7 @@ s_data <- rbind(read.table("UCI HAR Dataset/train/subject_train.txt"),
 
 features <- read.table("UCI HAR Dataset/features.txt")[,2]
 names(x_data) <- features
-x_data <- x_data[,grepl("-mean|-std", features)]
+x_data <- x_data[,grepl("-mean\\(|-std\\(", features)]
 
 # Use descriptive activity names to name the activities in the data set
 # Appropriately label the data set with descriptive variable names.

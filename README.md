@@ -57,7 +57,7 @@ The features table is assigned to the column headings of the observation (x) dat
 ```r
 features <- read.table("UCI HAR Dataset/features.txt")[,2]
 names(x_data) <- features
-x_data <- x_data[,grepl("-mean|-std", features)]
+x_data <- x_data[,grepl("-mean\\(|-std\\(", features)]
 ```
 
 
